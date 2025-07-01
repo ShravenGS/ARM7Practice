@@ -1,3 +1,4 @@
+/*Using Timer concept in LPC2129 board*/
 typedef unsigned int U32
 delay_second(unsigned int s){
 T0PR=15000000-1;

@@ -5,3 +5,4 @@ This repository contains a collection of ARM7-based programs developed and teste
 1) Keil uVision4
 2) Flashmagic
 3) Proteus for Software simulation
+4) RhydoLabz mini development board (LPC2129) for example can be used

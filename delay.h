@@ -14,7 +14,7 @@ while(T0PC<ms);
 T0TCR=0x03;
 T0TCR=0x01;
 }
-delay_microsecond(U32 ns){
+delay_microsecond(U32 us){
 T0PR=15-1;
 T0TCR=0x01;
 while(T0PC<us);

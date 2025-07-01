@@ -1,3 +1,5 @@
+/*Download the delay.h library from mt GitHub, add the same to your directory 
+and then try to implement*/
 #include<LPC21XX.H>
 #include "delay.h"
 void LCD_INIT(void);

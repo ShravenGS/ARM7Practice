@@ -10,14 +10,14 @@ T0TCR=0x01;
 delay_millisecond(U32 ms){
 T0PR=15000-1;
 T0TCR=0x01;
-while(T0PC<s);
+while(T0PC<ms);
 T0TCR=0x03;
 T0TCR=0x01;
 }
 delay_microsecond(U32 ns){
 T0PR=15-1;
 T0TCR=0x01;
-while(T0PC<s);
+while(T0PC<us);
 T0TCR=0x03;
 T0TCR=0x01;
 }

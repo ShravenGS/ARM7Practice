@@ -1,5 +1,5 @@
 #include<LPC21XX.h>
-#include"lcd2.h"
+#include"lcd.h"
 #define SW1 (1<<14)
 #define SW2 (1<<15)
 #define SW3 (1<<16)

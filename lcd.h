@@ -106,6 +106,8 @@ void LCD_SCROLL(unsigned char s[]){
 void LCD_DECIMAL(float n){
 		int integer=(int)n;
 		int fraction=(int)((n-integer)*100);
+		//In this we require only for 2 digits as far as sensor value goes. 
+		//We don't need 3 digit values as of now if you want then add more zeros when multiplying with decimal values
 		if(n<0){
 			LCD_DATA('-');
 			integer=-integer;

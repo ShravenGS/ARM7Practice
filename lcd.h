@@ -1,6 +1,8 @@
 /*Before creating custom symbols uncomment that CGRAM function and then try to implement*/
 /*And this is for 4 bit LCD(D4-D7 -LCD)*/
+/*In this library it includes genrating integer numbers, characters, float values and also custom characters(CGRAM)*/
 /*In the main function make sure that this file should be added in your directory*/
+
 #include<LPC21XX.h>
 #define LCD_D 0xF<<20       
 #define RS    1<<17

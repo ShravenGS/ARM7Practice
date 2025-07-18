@@ -1,3 +1,4 @@
+//for 1 segment only
 #include<LPC21XX.h>
 #define SEG_D 0XFF
 void delay_ms(int ms)

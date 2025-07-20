@@ -4,7 +4,7 @@
 #define SEG2 1<<9
 void delay_ms(int ms)
 {
-T0PR=15000-1	 ;
+T0PR=15000-1;
 T0TCR=0X01;
 while(T0TC<ms);
 T0TCR=0X03;	 

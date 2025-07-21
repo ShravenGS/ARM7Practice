@@ -128,6 +128,7 @@ void CGRAM_WRITE(unsigned char nBytes){
 	}
 }
 */
+/*In main function we can add the required function calling and produce the output*/
 
 
 

@@ -22,7 +22,7 @@ VICIntSelect=0;//Configured as IRQs FIQ-(1<<Interrupt number in VIC Block)
 	
 /*Allocate slot 0 to EINT0*/
 VICVectCntl0=IRQ_SLOT_EN|EINT0_num;
-VICVectAddr0=(int)eint0_isr;
+VICVectAddr0=(int)eint0_isr;//by default it will be in unsigned char data type so we will typecast it to integer data type
 
   
 /*Select the triggering mode of external interrupt*/

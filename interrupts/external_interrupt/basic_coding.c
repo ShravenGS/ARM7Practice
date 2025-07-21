@@ -19,6 +19,7 @@ IODIR0=LED;//P0.2 as digital output pin
   
 /*Configure the interrupt*/
 VICIntSelect=0;//Configured as IRQs FIQ-(1<<Interrupt number in VIC Block)
+	
 /*Allocate slot 0 to EINT0*/
 VICVectCntl0=IRQ_SLOT_EN|EINT0_num;
 VICVectAddr0=(int)eint0_isr;

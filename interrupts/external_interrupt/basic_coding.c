@@ -25,7 +25,7 @@ VICVectAddr0=(int)eint0_isr;
 
   
 /*Select the triggering mode of external interrupt*/
-EXTMODE=0x00;
+EXTMODE=0x00;//selecting level or edge
 EXTPOLAR=0x00;
 VICIntEnable=1<<14;
 
@@ -35,5 +35,21 @@ while(1){
 count++;
 	}
 }
+/*Registers in LPC2148 ARM7
+
+    EXTMODE:
+
+        0: Level-sensitive
+        1: Edge-sensitive
+
+    EXTPOLAR:
+
+        If level-sensitive:
+            0: LOW-level
+            1: HIGH-level
+        If edge-sensitive:
+            0: Falling edge
+            1: Rising edge
+	    */
 
 

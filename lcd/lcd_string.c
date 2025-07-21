@@ -1,3 +1,8 @@
+#include<LPC21XX.h>
+#define LCD_D 0xFF      
+#define RS    1<<8          
+#define E     1<<9
+
 void delay_ms(int ms)
 {
 T0PR=15000-1;
@@ -5,6 +10,18 @@ T0TCR=0X01;
 while(T0TC<ms);
 T0TCR=0X03;	 
 T0TCR=0X00;
+}
+
+void LCD_COMMAND(unsigned char cmd)
+ {
+    IOCLR0 = LCD_D;
+	IOSET0= (cmd&0xFF);// whatever commands we are giving will take place an and operation with 0xff as it is an 8 bit
+	IOCLR0=RS;
+	//IOCLR0=Rw;// If it is not grounded then this command should be given
+	IOSET0=E;                          
+    	delay_ms(2);// Enable will take place only for 2 ms
+	IOCLR0=E;// If it is cleared then only we can write on LCD Display
+
 }
 
 void LCD_INIT() {
@@ -18,18 +35,7 @@ void LCD_INIT() {
     //LCD_COMMAND(0xD4);//Starting address of line 4 for (20x4 display only)
     LCD_COMMAND(0x01);                   
 }
-void LCD_COMMAND(unsigned char cmd)
- {
-    IOCLR0 = LCD_D;
-	IOSET0= (cmd&0xFF);// whatever commands we are giving will take place an and operation with 0xff as it is an 8 bit
-	IOCLR0=RS;
-	//IOCLR0=Rw;// If it is not grounded then this command should be given
-	IOSET0=E;                          
-    	delay_ms(2);// Enable will take place only for 2 ms
-	IOCLR0=E;// If it is cleared then only we can write on LCD Display
 
-	
-}
 
 void LCD_DATA(unsigned char data)
 {

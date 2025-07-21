@@ -1,4 +1,4 @@
-/*Before creating custom symbols uncomment that CGRAM function and then try to implement*/
+ /*Before creating custom symbols uncomment that CGRAM function and then try to implement*/
 /*And this is for 8 bit LCD(D0-D7 -LCD)*/
 /*In this library it includes genrating single character, integer numbers, characters, float values and also custom characters(CGRAM)*/
 /*In the main function make sure that this file should be added in your directory*/

@@ -1,7 +1,7 @@
-//Add the lcd.h file from this repository and try this program
+//Add the lcd_8.h file from this repository and try this program
 // in cgram_lut array add the hexadecimal number according to 5x8 pixels on the lcd display
 #include<LPC21XX.h>
-#include"lcd.h"
+#include"lcd_8.h"
 unsigned char cgram_lut[]={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
 void CGRAM_WRITE(unsigned char nBytes){
 	unsigned char i;

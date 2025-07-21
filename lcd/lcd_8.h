@@ -23,7 +23,7 @@ void LCD_INIT() {
     LCD_COMMAND(0x38);//8 bit mode set                    
     LCD_COMMAND(0x0C);//Display ON cursor OFF                    
     LCD_COMMAND(0x80);//Starting address of line 1 for (16x2 and 20x4 display)
-    LCD_COMMAND(0xC0);//Starting address of line 2 for (16x2 and 20x4 display)
+    //LCD_COMMAND(0xC0);//Starting address of line 2 for (16x2 and 20x4 display)
     //LCD_COMMAND(0x94);//Starting address of line 3 for (20x4 display only)
     //LCD_COMMAND(0xD4);//Starting address of line 4 for (20x4 display only)
     LCD_COMMAND(0x01);                   

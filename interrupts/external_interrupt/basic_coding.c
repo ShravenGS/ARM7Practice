@@ -8,7 +8,7 @@ void eint0_isr(void)__irq{
 	EXTINT=0x01;//To clear EINT0 flag
 	IOSET0=LED;
 	IOCLR0=LED;
-	VICVectAddr=0;//To indicate the end of ISR(dummy wrte-not to reset)
+	VICVectAddr=0;//To indicate the end of ISR(dummy write-not to reset)
 }
 
 

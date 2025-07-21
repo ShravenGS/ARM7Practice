@@ -18,7 +18,7 @@ PINSEL1= 0x1;//P0.16 is enabled because at P0.1 we have one of the UART0 pin
 IODIR0=LED;//P0.2 as digital output pin
   
 /*Configure the interrupt*/
-VICIntSelect=0;//Configured as IRQs FIQ-(1<<Interrupt number in VIC Block)
+VICIntSelect=0;//Configured as IRQs. For FIQ-(1<<Interrupt number in VIC Block)
 	
 /*Allocate slot 0 to EINT0*/
 VICVectCntl0=IRQ_SLOT_EN|EINT0_num;

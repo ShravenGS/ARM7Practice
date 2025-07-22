@@ -11,7 +11,6 @@
 	  PINSEL0=0;
 	  IODIR0=LED;
 	  while(1){
-	  
 	  IOCLR0=LED;
 	  delay();
 	  IOSET0=LED;

@@ -7,7 +7,6 @@
 	  }
 	  }
 	  int main(){
-	  int led;
 	  PINSEL0=0;
 	  IODIR0=LED;
 	  while(1){

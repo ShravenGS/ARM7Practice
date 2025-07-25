@@ -16,7 +16,7 @@ void LCD_COMMAND(unsigned char cmd)
  {
     IOCLR0 = LCD_D;
 	IOSET0= (cmd&0xFF);// whatever commands we are giving will take place an and operation with 0xff as it is an 8 bit
-	IOCLR0=RS;
+	IOCLR0=RS;//Command mode when RS is set to 0
 	//IOCLR0=Rw;// If it is not grounded then this command should be given
 	IOSET0=E;                          
     	delay_ms(2);// Enable will take place only for 2 ms

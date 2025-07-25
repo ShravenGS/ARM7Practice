@@ -5,7 +5,5 @@
 	  while(1){
 	  IOSET0=1<<17;
 	  IOCLR0=1<<17;
-	 /* IOPIN0=(IOPIN0
-    */
 	  }
 	  }

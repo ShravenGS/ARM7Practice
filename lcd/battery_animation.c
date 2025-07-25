@@ -13,9 +13,13 @@ void CGRAM_WRITE(unsigned char nBytes){
 int main(){
 char symbol=0;
 LCD_INIT();
-while(1){
-LCD_COMMAND(0x80);
-
 CGRAM_WRITE(8);
+while(1){
+	LCD_COMMAND(0x80);
+	LCD_DATA(symbol++);
+	delay_ms(300);
+	if(symbol==6){
+		symbol=0;
+	}
 }
 }

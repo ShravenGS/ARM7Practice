@@ -11,11 +11,11 @@
 	  PINSEL0=0;
 	  IODIR0=LED;
 	  while(1){
-	  for(led=0;led<=7;led++){
-	  IOCLR0=LED;
-	  IOSET0=(1<<led)|(1<<(7-led));
-	  delay();
-	  }
+	  for(led=0; led<4;led++){
+            IOCLR0=LED;
+            IOSET0=(1<<(3-led))|(1<<(4+led));
+            delay();
+        	}
 	  for(led=7;led>=0;led--){
 	  IOCLR0=LED;
 	  IOSET0=(1<<led)|(1<<(7-led));

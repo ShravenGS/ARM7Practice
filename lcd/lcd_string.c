@@ -25,7 +25,7 @@ void LCD_COMMAND(unsigned char cmd)
 }
 
 void LCD_INIT() {
-    IODIR0 = RS | E | LCD_D;
+    IODIR0 = RS | E | LCD_D;// Setting P0.0 to P0.9 as output
     LCD_COMMAND(0x02);// Function home                    
     LCD_COMMAND(0x38);//8 bit mode set                    
     LCD_COMMAND(0x0C);//Display ON cursor OFF                    
@@ -33,7 +33,7 @@ void LCD_INIT() {
     //LCD_COMMAND(0xC0);//Starting address of line 2 for (16x2 and 20x4 display)
     //LCD_COMMAND(0x94);//Starting address of line 3 for (20x4 display only)
     //LCD_COMMAND(0xD4);//Starting address of line 4 for (20x4 display only)
-    LCD_COMMAND(0x01);                   
+    LCD_COMMAND(0x01);//Clear the LCD                   
 }
 
 
@@ -41,7 +41,7 @@ void LCD_DATA(unsigned char data)
 {
 	IOCLR0 = LCD_D;
 	IOSET0= (data&0xFF);
-	IOSET0=RS;
+	IOSET0=RS;//Data mode when RS is set to 1
 	IOSET0=E;                          
     	delay_ms(2);
 	IOCLR0=E;

@@ -4,7 +4,6 @@
 void LCD_INIT(void);
 void LCD_COMMAND(unsigned char);
 void LCD_DATA(unsigned char);
-void LCD_send_nibble(unsigned char);
 
 #define LCD_D 0xF<<20       
 #define RS    1<<17

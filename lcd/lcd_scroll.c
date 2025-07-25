@@ -73,7 +73,7 @@ void LCD_SCROLL(unsigned char s[]){
 
     for (i=0; i<length+16; i++) {  
         LCD_COMMAND(0x18);// Display shift left           
-        delay_ms(300);              
+        delay_ms(300);//Controlling the speed of scrolling              
     }
 }
 unsigned char s[50]="Om Namaha Shivaya";

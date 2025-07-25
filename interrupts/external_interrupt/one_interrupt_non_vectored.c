@@ -4,11 +4,11 @@
 
 void Non_vectored_isr(void)__irq
 {
-//if((VICIRQStatus>>14)&1){
+if((VICIRQStatus>>14)&1){
 	EXTINT=0x01;//To clear EINT0 flag
 	IOSET0=LED1;
 	IOCLR0=LED1;
-//	}
+	}
 	VICVectAddr=0;
 }
 int main(){

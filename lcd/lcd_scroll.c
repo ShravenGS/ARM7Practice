@@ -1,4 +1,5 @@
 #include<LPC21XX.h>
+//#include<string.h>
 #define LCD_D 0xFF      
 #define RS    1<<8          
 #define E     1<<9
@@ -56,6 +57,7 @@ return len;
 
 void LCD_SCROLL(unsigned char s[]){
 	int length=len(s),i;
+	//int length=strlen(s);
 	LCD_COMMAND(0x01);       
     delay_ms(2);
     LCD_COMMAND(0x80);        

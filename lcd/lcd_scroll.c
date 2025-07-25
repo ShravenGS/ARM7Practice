@@ -46,6 +46,13 @@ void LCD_DATA(unsigned char data)
     	delay_ms(2);
 	IOCLR0=E;
 }
+void LCD_STR(unsigned char s[]){
+	int i=0;
+	while(s[i]!='\0'){
+		LCD_DATA(s[i]);
+		i++;
+	}
+}
 int len(char s[]){
 	int i,len=0;
 	for(i=0;s[i]!='\0';i++){

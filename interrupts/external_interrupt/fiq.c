@@ -3,7 +3,7 @@
 #define LED2 1<<3
 
 
-extern void fiq_isr(void) {
+extern void fiq_isr(void) __irq{
 	EXTINT=0x01;//To clear EINT0 flag
 	IOSET0=LED1;
 	IOCLR0=LED1;	

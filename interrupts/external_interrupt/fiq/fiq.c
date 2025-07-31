@@ -3,7 +3,7 @@
 #define LED2 1<<3
 
 
-extern void fiq_isr(void) __irq{
+void FIQ_Handler(void)__irq {
 	EXTINT=0x01;//To clear EINT0 flag
 	IOSET0=LED1;
 	IOCLR0=LED1;	
@@ -15,6 +15,7 @@ PINSEL1= 0x1;
 IODIR0=LED1;
 
 VICIntSelect=1<<14;
+
 EXTMODE=0x01;
 EXTPOLAR=0x00;
 VICIntEnable=1<<14;

@@ -1,4 +1,5 @@
 #include<LPC21XX.h>
+#include"delay.h"
 #define SCL_EN  0x00000010
 #define SDA_EN  0x00000040
 
@@ -11,16 +12,6 @@
 #define  STO_BIT 4
 #define  STA_BIT 5
 #define I2EN_BIT 6
-
-void delay(unsigned long d)
-{
-  unsigned int j;
-  for(;d>0;d--)
-  {
-   for(j=12000;j>0;j--);
-  }
-
-}
 
 void I2C_INIT(void)
 {

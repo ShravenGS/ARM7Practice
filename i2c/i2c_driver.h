@@ -61,7 +61,7 @@ unsigned char I2C_NACK(void)
 
 unsigned char I2C_MASTERACK(void)
 {	
-	I2CONSET = 0x04;
+	I2CONSET = 1<<AA_BIT;
   I2CONCLR = 1<<SI_BIT;
 	while(((I2CONSET>>SI_BIT)&1)==0);
 	I2CONCLR = 0x04;

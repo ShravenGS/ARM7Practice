@@ -51,7 +51,7 @@ void I2C_STOP(void)
 
 unsigned char I2C_NACK(void)
 {	
-	I2CONSET = 0x00; 
+	//I2CONSET = 0x00; 
   I2CONCLR = 1<<SI_BIT;
 	while(((I2CONSET>>SI_BIT)&1)==0);
 	return I2DAT;

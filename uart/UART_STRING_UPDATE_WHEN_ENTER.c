@@ -29,20 +29,17 @@ int main() {
 	int i;
 	UART0_CONFIG();
 	LCD_INIT();
-	while(1)
-	{
-		i=0;
-		while(1)
-		{
+	i=0;
+	while(1){
 		ch=UART0_RX();
-		if(ch=='\r')
-		{
-		LCD_COMMAND(0x01);
-		LCD_COMMAND(0x80);
-		LCD_STR(buffer);
+		if(ch=='\r'){
+			LCD_COMMAND(0x01);
+			LCD_COMMAND(0x80);
+			LCD_STR(buffer);
+			i=0;
 		}
-		else
-		buffer[i++]=ch;
+		else{
+			buffer[i++]=ch;
 		}
-		}
+	}
 }

@@ -32,6 +32,7 @@ int main() {
 	i=0;
 	while(1){
 		ch=UART0_RX();
+		UART0_TX(ch);
 		if(ch=='\r'){
 			LCD_COMMAND(0x01);
 			LCD_COMMAND(0x80);

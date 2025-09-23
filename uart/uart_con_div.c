@@ -8,7 +8,7 @@ void delay(unsigned int ms){
 	T0TCR=0x00;
 }
 
-void LED_CON(void){
+void LED_DIV(void){
 	int led; 
 	for(led=7;led>=0;led--){
 	  IOCLR0=LED;
@@ -17,7 +17,7 @@ void LED_CON(void){
 	  }
 }
 
-void LED_DIV(void){
+void LED_CON(void){
 	int led;
 	for(led=0; led<4;led++){
             IOCLR0=LED;

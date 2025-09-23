@@ -1,10 +1,6 @@
 #include <LPC21XX.h>
 #include "lcd_n.h"
 
-#define LED1 (1 << 17)
-#define LED2 (1 << 18)
-#define LED3 (1 << 19)
-
 void UART0_CONFIG(void) {
     PINSEL0 = 0x5; 
     U0LCR = 0x83; 

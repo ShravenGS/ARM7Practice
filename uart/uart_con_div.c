@@ -9,24 +9,21 @@ void delay(unsigned int ms){
 }
 
 void LED_CON(void){
-	int i;
-	
-
-	 for(i=0;i<=3;i++){
-	 IOCLR0=((1<<(3-i))|(1<<(3+i)));
-	 delay(500);
-	 IOSET0=((1<<(3-i))|(1<<(3+i)));
-	}
+	int led; 
+	for(led=7;led>=0;led--){
+	  IOCLR0=LED;
+	  IOSET0=(1<<led)|(1<<(7-led));
+	  delay(500);
+	  }
 }
 
 void LED_DIV(void){
-	int i;
-
-	 for(i=3;i>=0;i--){
-	 IOSET0=((1<<(3-i))|(1<<(3+i)));
-	 delay(500);
-	 IOCLR0=((1<<(3-i))|(1<<(3+i)));
-	}
+	int led;
+	for(led=0; led<4;led++){
+            IOCLR0=LED;
+            IOSET0=(1<<(3-led))|(1<<(4+led));
+            delay(500);
+        	}
 }
 
 int main(){
